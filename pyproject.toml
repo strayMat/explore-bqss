@@ -17,6 +17,11 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
+dependencies = [
+    "polars>=1.23.0",
+    "pyarrow>=19.0.1",
+    "skrub>=0.5.1",
+]
 
 [project.urls]
 Homepage = "https://strayMat.github.io/explore-bqss/"
@@ -28,13 +33,12 @@ dev = [
     "pytest>=7.2.0",
     "pre-commit>=2.20.0",
     "tox-uv>=1.11.3",
-    
     "mypy>=0.991",
-    
     "ruff>=0.9.2",
     "mkdocs>=1.4.2",
     "mkdocs-material>=8.5.10",
     "mkdocstrings[python]>=0.26.1",
+    "ipykernel>=6.29.5",
 ]
 
 [build-system]
