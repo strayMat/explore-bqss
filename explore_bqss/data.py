@@ -46,7 +46,7 @@ def fetch_bqss_data(cache_dir: Path = DIR2DATA) -> dict:
             local_path = cache_dir / f"{df_name}.parquet"
             if not local_path.exists():
                 df = pd.read_parquet(df_metadata_dict["url"])
-                df.write_parquet(local_path)
+                df.to_parquet(local_path)
             else:
                 df = pl.read_parquet(local_path)
         df_dict[df_name] = df
