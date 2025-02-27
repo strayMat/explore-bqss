@@ -1,0 +1,52 @@
+site_name: explore-bqss
+repo_url: https://github.com/strayMat/explore-bqss
+site_url: https://strayMat.github.io/explore-bqss
+site_description: Testing d'uv pour une analyse de données.
+site_author: Matthieu Doutreligne
+edit_uri: edit/main/docs/
+repo_name: strayMat/explore-bqss
+copyright: Maintained by <a href="https://strayMat.com">strayMat</a>.
+
+nav:
+  - Home: index.md
+  - Modules: modules.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["explore_bqss"]
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/strayMat/explore-bqss
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/explore-bqss
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
