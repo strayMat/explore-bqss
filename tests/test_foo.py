@@ -1,4 +1,4 @@
-from explore_bqss.foo import foo
+from explore_bqss.data import foo
 
 
 def test_foo():
