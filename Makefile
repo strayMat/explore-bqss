@@ -36,6 +36,14 @@ docs-test: ## Test if documentation can be built without warnings or errors
 docs: ## Build and serve the documentation
 	@uv run mkdocs serve
 
+.PHONY: report
+report: ## Generate HTML report from exploration notebook
+	@echo "🚀 Generating HTML report from exploration notebook"
+	@uv run jupytext --to ipynb notebooks/1-explore.py --output notebooks/1-explore.ipynb
+	@uv run jupyter nbconvert --to html --execute notebooks/1-explore.ipynb --output-dir=reports --output=exploration-report.html
+	rm notebooks/1-explore.ipynb
+	@echo "📊 Report generated at reports/exploration-report.html"
+
 .PHONY: help
 help:
 	@uv run python -c "import re; \
