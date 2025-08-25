@@ -51,16 +51,3 @@ def fetch_bqss_data(cache_dir: Path = DIR2DATA) -> dict:
                 df = pl.read_parquet(local_path)
         df_dict[df_name] = df
     return df_dict
-
-
-def foo(bar: str) -> str:
-    """
-    A simple function that returns the input string.
-
-    Args:
-        bar (str): The input string.
-
-    Returns:
-        str: The input string.
-    """
-    return bar
