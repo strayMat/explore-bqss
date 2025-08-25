@@ -18,8 +18,11 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
+    "jupytext>=1.17.2",
+    "nbconvert>=7.16.6",
     "polars>=1.23.0",
     "pyarrow>=19.0.1",
+    "seaborn>=0.13.2",
     "skrub>=0.5.1",
 ]
 
